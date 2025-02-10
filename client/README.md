@@ -11,4 +11,5 @@
 ## Frontend
 
 - React (JavsScript + Vite)
-- Chakra UI
+  - Material UI (MUI)
+- CSS

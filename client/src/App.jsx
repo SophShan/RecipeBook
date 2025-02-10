@@ -1,42 +1,18 @@
 import { Route, Routes } from "react-router-dom";
-import { Container, AppBar, Typography, Grow, Grid2 } from "@mui/material";
-import Recipes from "./components/Recipes/Recipes";
+import Recipes from "./pages/Recipes";
+import AppBar from "./components/AppBar";
+import CheckBoxFilter from "./components/AppBar";
+import CreatePage from "./pages/CreatePage";
+import "./styles.css";
 
 function App() {
   return (
     <>
-      <Container maxWidth="lg">
-        {/* Container is to center elements*/}
-        <AppBar position="static" color="inherit">
-          {/* Web page title*/}
-          <Typography variant="h2" align="center">
-            Recipe Book
-          </Typography>
-          {/* Grow is for animations, has property to grow in */}
-          <Grow in>
-            <Container>
-              {/* Grid contained then contains grid items */}
-              <Grid2
-                container
-                justify="space-between"
-                alignItems="stretch"
-                spacing={3}
-              >
-                {/* Makw the item take the full space on very small device but 7/12 space on small and medium devices*/}
-                <Grid2 item xs={12} sm={7}>
-                  <Recipes />
-                </Grid2>
-              </Grid2>
-            </Container>
-          </Grow>
-        </AppBar>
-      </Container>
-      {/* 
+      <AppBar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Recipes />} />
         <Route path="/create" element={<CreatePage />} />
       </Routes>
-      */}
     </>
   );
 }

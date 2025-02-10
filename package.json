@@ -11,12 +11,19 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@chakra-ui/react": "^3.7.0",
+    "@chakra-ui/theme-tools": "^2.2.6",
+    "autoprefixer": "^10.4.20",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "joi": "^17.13.3",
     "mongodb": "^6.13.0",
-    "mongoose": "^8.9.7"
+    "mongoose": "^8.9.7",
+    "postcss": "^8.5.1",
+    "react-icons": "^5.4.0",
+    "tailwindcss": "^4.0.5",
+    "zustand": "^5.0.3"
   }
 }
