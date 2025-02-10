@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* Default light theme */
+:root {
+  --background-color: white;
+  --text-color: black;
+  --button-bg: black;
+  --button-text-color: white;
+}
+
+/* Dark mode theme */
+body.dark {
+  --background-color: #121212;
+  --text-color: white;
+  --button-bg: white;
+  --button-text-color: black;
+}
