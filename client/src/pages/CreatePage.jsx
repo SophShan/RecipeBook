@@ -7,7 +7,8 @@ export default function CreatePage() {
   const [newRecipe, setNewRecipe] = useState({
     name: "",
     instructions: "",
-    image: "",
+    image: null,
+    imageType: "",
   });
 
   const [imageUrl, setImageUrl] = useState("");
@@ -103,15 +104,20 @@ export default function CreatePage() {
                       <span>Upload a file</span>
                       <input
                         id="file-upload"
-                        name="file-upload"
+                        name="image" // name should match the key for name in upload.single(name) for multer in recipes.route.js
                         type="file"
                         className="sr-only"
                         accept="image/*"
                         onChange={(e) => {
                           const file = e.target.files?.[0];
                           if (file) {
-                            setImageUrl(URL.createObjectURL(file)); // Generate preview URL
-                            setNewRecipe({ ...newRecipe, image: file.name });
+                            setImageUrl(URL.createObjectURL(file)); // Generate preview URL to show user the uploaded file
+                            console.log(file);
+                            setNewRecipe({
+                              ...newRecipe,
+                              image: file,
+                              imageType: file.type,
+                            });
                           }
                         }}
                       />
@@ -285,7 +291,7 @@ export default function CreatePage() {
           <button
             className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             onClick={handleNewRecipe}
-            type="sumbit"
+            type="submit"
           >
             Save
           </button>
