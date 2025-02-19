@@ -64,15 +64,15 @@ export default function AppBar() {
             <div className="flex shrink-0 items-center hover:bg-gray-900">
               <a href="/">
                 <img
-                  alt="Your Company"
-                  src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                  alt="Home button"
+                  src="/src/assets/recipeBookIcon.jpeg"
                   className="h-8 w-auto "
                 />
               </a>
             </div>
 
             <div className="hidden sm:ml-6 sm:block">
-              <div className="flex space-x-4">
+              {/* <div className="flex space-x-4">
                 <h6 className="text-white rounded-md px-3 py-2 text-sm font-medium">
                   Filter By:{" "}
                 </h6>
@@ -80,7 +80,7 @@ export default function AppBar() {
                   <a
                     key={item.name}
                     href={item.href}
-                    aria-current={item.current ? "page" : undefined}
+                    aria-current={item.current ? "page" :re undefined}
                     className={classNames(
                       item.current
                         ? "bg-gray-900 text-white"
@@ -91,7 +91,7 @@ export default function AppBar() {
                     {item.name}
                   </a>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -103,14 +103,14 @@ export default function AppBar() {
                 <FaRegPlusSquare fontSize={25} />
               </Button>
             </Link>
-
+            {/*
             <Button
               onClick={toggleTheme}
               className="text-gray-300 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
             >
               {isDarkMode ? <FaMoon /> : <FaSun />}
             </Button>
-            {/* Profile dropdown */}
+            {/* Profile dropdown }
             <Menu as="div" className="relative ml-3">
               <div>
                 <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 focus:outline-hidden">
@@ -144,7 +144,7 @@ export default function AppBar() {
                   </a>
                 </MenuItem>
               </MenuItems>
-            </Menu>
+            </Menu> */}
           </div>
         </div>
       </div>
